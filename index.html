@@ -9,7 +9,7 @@
   </head>
   <body>
     <!-- navbar -->
-    <nav>
+    <nav class="nav">
       <div class="wrapper nav_div">
         <img src="/assets/logo.svg" class="logo" />
         <div class="nav_icon_div">
@@ -47,7 +47,10 @@
     <header class="wrapper">
       <div class="header_content">
         <h3>Арендуй Караоке-Зал до 10 человек</h3>
-        <h1>возьми алкоголь и еду с собой</h1>
+        <div style="position: relative">
+          <h1>возьми алкоголь и еду с собой</h1>
+          <div class="person_name">м. Лубянка</div>
+        </div>
         <div class="benefits">
           <div>
             <img src="/assets/icons8_verified_account.png" alt="" />
@@ -112,6 +115,111 @@
           <div class="line"></div>
         </div>
         <p>Скидка в День Рождения</p>
+      </div>
+    </div>
+
+    <!-- Hall -->
+    <div class="hall wrapper">
+      <div class="hall_container">
+        <div class="hall_texts">
+          <div class="hall_text_pc">
+            <h2>Наши залы</h2>
+            <p class="subtitle">Ознакомтесь с атмосферой праздника</p>
+
+            <div class="links">
+              <a href="#" class="active">Hall №1</a>
+              <a href="#">Hall №2</a>
+              <a href="#">Hall №3</a>
+              <a href="#">Hall №4</a>
+              <a href="#">Hall №5</a>
+            </div>
+          </div>
+
+          <div class="slider_controls">
+            <div class="rooms">
+              <div class="room_info room1">
+                <img src="/assets/icons8_room 1.png" alt="Room icon" />
+                <span>№ 1</span>
+              </div>
+              <div class="room_info room2">
+                <img src="/assets/icons8_expand 1.png" alt="Size icon" />
+                <span>40 m&sup2;</span>
+              </div>
+              <div class="room_info room3">
+                <img src="/assets/icons8_people 1.png" alt="Capacity icon" />
+                <span>до 20-ти человек</span>
+              </div>
+            </div>
+            <div class="slider_arrows">
+              <button class="arrow left_arrow" aria-label="Previous image">
+                <img src="/assets/left_arrow.svg" alt="Previous" />
+              </button>
+              <p class="slider_counter">
+                <span class="current">1</span> <span class="total">из 17</span>
+              </p>
+              <button class="arrow right_arrow" aria-label="Next image">
+                <img src="/assets/right_arrow.svg" alt="Next" />
+              </button>
+            </div>
+            <button class="hall_btn">Забронировать</button>
+          </div>
+        </div>
+
+        <div class="hall_images">
+          <div class="main_image">
+            <img src="/assets/Rectangle 7.png" alt="Hall interior view" />
+            <div class="main_black_img"></div>
+          </div>
+          <div class="thumbnail_gallery">
+            <div class="thumbnail_wrapper">
+              <img src="/assets/Rectangle 10.png" alt="Hall thumbnail 1" />
+              <div class="onHover">
+                <img src="/assets/icons8_eye 1.png" alt="View icon" />
+              </div>
+            </div>
+            <div class="thumbnail_wrapper">
+              <img src="/assets/Rectangle 12.png" alt="Hall thumbnail 2" />
+              <div class="onHover">
+                <img src="/assets/icons8_eye 1.png" alt="View icon" />
+              </div>
+            </div>
+            <div class="thumbnail_wrapper">
+              <img
+                src="/assets/Rectangle 7.png"
+                alt="Hall thumbnail 3"
+                class="active"
+              />
+              <div class="onHover">
+                <img src="/assets/icons8_eye 1.png" alt="View icon" />
+              </div>
+            </div>
+            <div class="thumbnail_wrapper">
+              <img src="/assets/Rectangle 13.png" alt="Hall thumbnail 4" />
+              <div class="onHover">
+                <img src="/assets/icons8_eye 1.png" alt="View icon" />
+              </div>
+            </div>
+            <div class="thumbnail_wrapper">
+              <img src="/assets/Rectangle 14.png" alt="Hall thumbnail 5" />
+              <div class="onHover">
+                <img src="/assets/icons8_eye 1.png" alt="View icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hall_text_mob">
+          <h2>Наши залы</h2>
+          <p class="subtitle_mob">Ознакомтесь с атмосферой праздника</p>
+
+          <div class="links">
+            <a href="#" class="active">Hall №1</a>
+            <a href="#">Hall №2</a>
+            <a href="#">Hall №3</a>
+            <a href="#">Hall №4</a>
+            <a href="#">Hall №5</a>
+          </div>
+        </div>
       </div>
     </div>
   </body>
