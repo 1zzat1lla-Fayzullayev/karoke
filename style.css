@@ -1951,7 +1951,7 @@ header {
   justify-content: space-between;
 }
 
-.bron_hall_container .top_bronHall .lft-brnHTP P {
+.bron_hall_container .top_bronHall .lft-brnHTP p {
   font-family: Muller;
   font-size: 24px;
   font-style: normal;
@@ -1979,7 +1979,38 @@ header {
   cursor: pointer;
 }
 
+.top_bronHall .rght-brnHTP {
+  padding: 2rem;
+}
+
+.top_bronHall .rght-brnHTP .btn1,
+.btn2 {
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  background-color: #2e3441;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.top_bronHall .lft-brnHTP p {
+  font-family: Muller;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+
 .bron_hall_container .top_bronHall .rght-brnHTP .btn1:hover,
+.btn2:hover {
+  background: rgba(255, 198, 25, 0.2);
+  transition: all 0.3s ease;
+}
+
+.top_bronHall .rght-brnHTP .btn1:hover,
 .btn2:hover {
   background: rgba(255, 198, 25, 0.2);
   transition: all 0.3s ease;
@@ -1987,7 +2018,15 @@ header {
 
 .bron_hall_container .top_bronHall .rght-brnHTP span {
   color: #fff;
+  font-family: Muller;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.72px;
+}
 
+.top_bronHall .rght-brnHTP span {
+  color: #fff;
   font-family: Muller;
   font-size: 24px;
   font-style: normal;
@@ -1996,6 +2035,14 @@ header {
 }
 
 .bron_hall_container .top_bronHall .rght-brnHTP p {
+  color: #606571;
+  font-family: Muller;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.top_bronHall .rght-brnHTP p {
   color: #606571;
   font-family: Muller;
   font-size: 16px;
@@ -2099,6 +2146,20 @@ header {
   .bron_hall_container .top_bronHall {
     align-items: start;
   }
+  .bron_hall_container .top_bronHall .rght-brnHTP {
+    display: none;
+  }
+  .top_bronHall .rght-brnHTP {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .top_bronHall .rght-brnHTP {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2110,5 +2171,8 @@ header {
   .bron_hall_container .top_bronHall .lft-brnHTP p {
     font-size: 14px;
     font-style: normal;
+  }
+  .bron_hall_container .btmHall .swiper_Hall{
+    gap: 15px;
   }
 }
