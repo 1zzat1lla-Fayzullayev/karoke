@@ -6,3 +6,42 @@ document.addEventListener("scroll", () => {
     nav.classList.remove("scroll_blur");
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const questions = document.querySelectorAll(".question-block");
+
+  questions.forEach((question) => {
+    question.addEventListener("click", function () {
+      const parent = this.parentElement;
+      parent.classList.toggle("active");
+
+      questions.forEach((q) => {
+        if (q !== this && q.parentElement.classList.contains("active")) {
+          q.parentElement.classList.remove("active");
+        }
+      });
+    });
+  });
+});
+
+// Add this script for scroll-to-top functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  
+  scrollToTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.style.opacity = '1';
+      scrollToTopBtn.style.visibility = 'visible';
+    } else {
+      scrollToTopBtn.style.opacity = '0';
+      scrollToTopBtn.style.visibility = 'hidden';
+    }
+  });
+});
