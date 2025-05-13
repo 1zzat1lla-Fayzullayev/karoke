@@ -24,120 +24,126 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const scrollToTopBtn = document.getElementById('scrollToTop');
-  
-  scrollToTopBtn.addEventListener('click', function() {
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollToTopBtn = document.getElementById("scrollToTop");
+
+  scrollToTopBtn.addEventListener("click", function () {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   });
-  
-  window.addEventListener('scroll', function() {
+
+  window.addEventListener("scroll", function () {
     if (window.pageYOffset > 300) {
-      scrollToTopBtn.style.opacity = '1';
-      scrollToTopBtn.style.visibility = 'visible';
+      scrollToTopBtn.style.opacity = "1";
+      scrollToTopBtn.style.visibility = "visible";
     } else {
-      scrollToTopBtn.style.opacity = '0';
-      scrollToTopBtn.style.visibility = 'hidden';
+      scrollToTopBtn.style.opacity = "0";
+      scrollToTopBtn.style.visibility = "hidden";
     }
   });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const burger = document.querySelector('.burger');
-  const mobileMenu = document.querySelector('.mobile_menu');
-  const closeBtn = document.querySelector('.mobile_close');
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector(".burger");
+  const mobileMenu = document.querySelector(".mobile_menu");
+  const closeBtn = document.querySelector(".mobile_close");
 
   if (!burger || !mobileMenu) return;
 
-  burger.addEventListener('click', function (e) {
+  burger.addEventListener("click", function (e) {
     e.stopPropagation();
-    mobileMenu.classList.toggle('active');
+    mobileMenu.classList.toggle("active");
   });
 
-  document.addEventListener('click', function () {
-    mobileMenu.classList.remove('active');
+  document.addEventListener("click", function () {
+    mobileMenu.classList.remove("active");
   });
 
-  mobileMenu.addEventListener('click', function (e) {
+  mobileMenu.addEventListener("click", function (e) {
     e.stopPropagation();
   });
 
-  closeBtn?.addEventListener('click', function () {
-    mobileMenu.classList.remove('active');
+  closeBtn?.addEventListener("click", function () {
+    mobileMenu.classList.remove("active");
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector(".swiper_Hall");
+  const slides = document.querySelectorAll(".swiper_card");
+  const prevBtns = document.querySelectorAll(".swiper_btn_prev");
+  const nextBtns = document.querySelectorAll(".swiper_btn_next");
+  const paginations = document.querySelectorAll(".swiper_pagination span");
 
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.swiper_Hall');
-  const slides = document.querySelectorAll('.swiper_card');
-  const prevBtn = document.querySelector('.swiper_btn_prev');
-  const nextBtn = document.querySelector('.swiper_btn_next');
-  const pagination = document.querySelector('.swiper_pagination span');
-  
   let currentIndex = 0;
   const slideCount = slides.length;
-  const slideWidth = slides[0].offsetWidth + 100;
-  const visibleSlides = 1; 
+  let slideWidth = slides[0].offsetWidth + 100;
+  const visibleSlides = 1;
 
   function updateSlider() {
- 
     slider.scrollTo({
       left: currentIndex * slideWidth,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
-    
-  
-    pagination.textContent = currentIndex + 1;
-    
-   
+
+    paginations.forEach((pagination) => {
+      pagination.textContent = currentIndex + 1;
+    });
+
     slides.forEach((slide, index) => {
       if (index === currentIndex) {
-        slide.classList.remove('opct-disActive');
-        const img = slide.querySelector('.img');
+        slide.classList.remove("opct-disActive");
+        const img = slide.querySelector(".img");
         if (img) {
-          img.classList.remove('inactive');
-          img.classList.add('active');
+          img.classList.remove("inactive");
+          img.classList.add("active");
         }
       } else {
-        slide.classList.add('opct-disActive');
-        const img = slide.querySelector('.img');
+        slide.classList.add("opct-disActive");
+        const img = slide.querySelector(".img");
         if (img) {
-          img.classList.add('inactive');
-          img.classList.remove('active');
+          img.classList.add("inactive");
+          img.classList.remove("active");
         }
       }
     });
-    
-    prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
-    prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
-    
-    nextBtn.style.opacity = currentIndex >= slideCount - visibleSlides ? '0.5' : '1';
-    nextBtn.style.pointerEvents = currentIndex >= slideCount - visibleSlides ? 'none' : 'auto';
+
+    prevBtns.forEach((btn) => {
+      btn.style.opacity = currentIndex === 0 ? "0.5" : "1";
+      btn.style.pointerEvents = currentIndex === 0 ? "none" : "auto";
+    });
+
+    nextBtns.forEach((btn) => {
+      btn.style.opacity =
+        currentIndex >= slideCount - visibleSlides ? "0.5" : "1";
+      btn.style.pointerEvents =
+        currentIndex >= slideCount - visibleSlides ? "none" : "auto";
+    });
   }
-  
-  prevBtn.addEventListener('click', function() {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSlider();
-    }
+
+  prevBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateSlider();
+      }
+    });
   });
-  
-  nextBtn.addEventListener('click', function() {
-    if (currentIndex < slideCount - visibleSlides) {
-      currentIndex++;
-      updateSlider();
-    }
+
+  nextBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      if (currentIndex < slideCount - visibleSlides) {
+        currentIndex++;
+        updateSlider();
+      }
+    });
   });
-  
+
   updateSlider();
-  
-  
-  window.addEventListener('resize', function() {
-    
+
+  window.addEventListener("resize", function () {
     slideWidth = slides[0].offsetWidth + 100;
     updateSlider();
   });
