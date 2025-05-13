@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Add this script for scroll-to-top functionality
 document.addEventListener('DOMContentLoaded', function() {
   const scrollToTopBtn = document.getElementById('scrollToTop');
   
@@ -43,5 +42,30 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollToTopBtn.style.opacity = '0';
       scrollToTopBtn.style.visibility = 'hidden';
     }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const burger = document.querySelector('.burger');
+  const mobileMenu = document.querySelector('.mobile_menu');
+  const closeBtn = document.querySelector('.mobile_close');
+
+  if (!burger || !mobileMenu) return;
+
+  burger.addEventListener('click', function (e) {
+    e.stopPropagation();
+    mobileMenu.classList.toggle('active');
+  });
+
+  document.addEventListener('click', function () {
+    mobileMenu.classList.remove('active');
+  });
+
+  mobileMenu.addEventListener('click', function (e) {
+    e.stopPropagation();
+  });
+
+  closeBtn?.addEventListener('click', function () {
+    mobileMenu.classList.remove('active');
   });
 });

@@ -43,6 +43,32 @@
       </div>
     </nav>
 
+    <!-- Mobile Navbar -->
+    <div class="mobile_menu">
+      <div class="mobileMenuIcons">
+        <img src="/assets/logo.svg" alt="" class="logo" />
+        <img src="/assets/close.svg" alt="" class="mobile_close"/>
+      </div>
+      <div class="nav_icon_div_mobile">
+        <div class="nav_icon">
+          <div class="img_div">
+            <img src="/assets/icons8_shake_phone 1.png" />
+          </div>
+          <span>+38 (097) 970-90-90 </span>
+        </div>
+        <div class="nav_icon">
+          <div class="img_div">
+            <img src="/assets/icons8_marker 1.png" />
+          </div>
+          <span class="marker_span">м. Лубянка</span>
+        </div>
+      </div>
+      <div class="nav_buttons_mobile">
+        <button>Наши залы</button>
+        <button class="bron_button">Забронировать</button>
+      </div>
+    </div>
+
     <!-- Header -->
     <header class="wrapper">
       <div class="header_content">
@@ -532,59 +558,75 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-overlay"></div>
-        <div class="footer-container wrapper">
-          <div class="footer-logo">
-            <img src="/assets/logo.svg" alt="Company Logo" class="footer-logo-img">
+      <div class="footer-overlay"></div>
+      <div class="footer-container wrapper">
+        <div class="footer-logo">
+          <img
+            src="/assets/logo.svg"
+            alt="Company Logo"
+            class="footer-logo-img"
+          />
+        </div>
+
+        <div class="footer-contacts">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <img src="/assets/icons8_shake_phone 1.png" alt="Phone" />
+            </div>
+            <span class="contact-text">+38 (097) 970-90-90</span>
           </div>
-      
-          <div class="footer-contacts">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <img src="/assets/icons8_shake_phone 1.png" alt="Phone">
-              </div>
-              <span class="contact-text">+38 (097) 970-90-90</span>
+
+          <div class="contact-item for_desktop">
+            <div class="contact-icon">
+              <img src="/assets/calendar.svg" alt="Calendar" />
             </div>
-      
-            <div class="contact-item for_desktop">
-              <div class="contact-icon">
-                <img src="/assets/calendar.svg" alt="Calendar">
-              </div>
-              <span class="contact-text">Пн — Вс круглосуточно</span>
-            </div>
-      
-            <div class="contact-item for_desktop">
-              <div class="contact-icon">
-                <img src="/assets/icons8_marker 1.png" alt="Location">
-              </div>
-              <span class="contact-text">м. Лубянка, ул. Сретенский переулок, 4</span>
-            </div>
-            
-            <div class="contact-item for_mobile">
-              <div class="contact-icon">
-                <img src="/assets/icons8_marker 1.png" alt="Location">
-              </div>
-              <span class="contact-text">м. Лубянка</span>
-            </div>
+            <span class="contact-text">Пн — Вс круглосуточно</span>
           </div>
-      
-          <div class="footer-action">
-            <button class="route-button for_desktop">Построить маршрут</button>
-            <div class="footer_buttons for_mobile">
-              <button>Наши залы</button>
-              <button class="bron_button">Забронировать</button>
+
+          <div class="contact-item for_desktop">
+            <div class="contact-icon">
+              <img src="/assets/icons8_marker 1.png" alt="Location" />
             </div>
+            <span class="contact-text"
+              >м. Лубянка, ул. Сретенский переулок, 4</span
+            >
+          </div>
+
+          <div class="contact-item for_mobile">
+            <div class="contact-icon">
+              <img src="/assets/icons8_marker 1.png" alt="Location" />
+            </div>
+            <span class="contact-text">м. Лубянка</span>
           </div>
         </div>
-        
-        <div class="footer_right" id="scrollToTop">
-          <div class="footer_arrow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="10" viewBox="0 0 14 10" fill="none">
-              <path d="M2 8L7.76424 2M12 8L6.23576 2" stroke="#606571" stroke-width="3"/>
-            </svg>
+
+        <div class="footer-action">
+          <button class="route-button for_desktop">Построить маршрут</button>
+          <div class="footer_buttons for_mobile">
+            <button>Наши залы</button>
+            <button class="bron_button">Забронировать</button>
           </div>
-          <span>Подняться вверх</span>
         </div>
-      </footer>
+      </div>
+
+      <div class="footer_right" id="scrollToTop">
+        <div class="footer_arrow">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="10"
+            viewBox="0 0 14 10"
+            fill="none"
+          >
+            <path
+              d="M2 8L7.76424 2M12 8L6.23576 2"
+              stroke="#606571"
+              stroke-width="3"
+            />
+          </svg>
+        </div>
+        <span>Подняться вверх</span>
+      </div>
+    </footer>
   </body>
 </html>
