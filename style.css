@@ -31,7 +31,7 @@ body {
   font-family: Muller;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -219,12 +219,11 @@ nav {
   transform: translateY(0);
 }
 
-.mobileMenuIcons{
+.mobileMenuIcons {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 
 .mobile_nav_icons .nav_icon {
   flex-direction: column;
@@ -242,7 +241,6 @@ nav {
   width: 50px;
   height: 50px;
 }
-
 
 .nav_icon_div_mobile {
   display: flex;
@@ -1839,34 +1837,34 @@ header {
     font-weight: 400;
     letter-spacing: 0.42px;
   }
-  .footer_arrow{
+  .footer_arrow {
     position: unset;
   }
-  
+
   .for_desktop {
     display: none;
   }
-  
+
   .footer-container {
     flex-direction: column;
     align-items: flex-start;
     gap: 2.5rem;
   }
-  
+
   .footer-logo,
   .footer-contacts,
   .footer-action {
     width: 100%;
   }
-  
+
   .footer-action {
     justify-content: flex-start;
   }
-  
+
   .footer-contacts {
     flex-direction: column;
   }
-  
+
   .footer_right {
     position: relative;
     right: 0;
@@ -1874,7 +1872,7 @@ header {
     margin-top: 30px;
     align-self: flex-end;
   }
-  
+
   .footer_right span {
     transform: rotate(0deg);
     margin-top: 10px;
@@ -1887,7 +1885,7 @@ header {
   .footer {
     padding: 2rem 1.5rem;
   }
-  
+
   .contact-text {
     font-size: 0.9rem;
   }
@@ -1897,16 +1895,220 @@ header {
   .footer {
     padding: 1.5rem 1rem;
   }
-  
+
   .footer-logo-img {
     height: 40px;
   }
-  
+
   .footer-contacts {
     gap: 1rem;
   }
-  
+
   .footer_buttons button {
     width: 100%;
+  }
+}
+
+/* Bron hall */
+.bron_hall {
+  background: #131517;
+  color: white;
+}
+
+.bron_hall_container {
+  /* padding-left: 51px; */
+  /* padding-top: 109px; */
+  padding-bottom: 96px;
+  padding: 2rem;
+}
+
+.bron_hall_container .top_bronHall {
+  max-width: 1445px;
+  margin: 0 auto;
+}
+
+.bron_hall_container .top_bronHall .lft-brnHTP {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bron_hall_container .top_bronHall .lft-brnHTP h2 {
+  color: #fff;
+
+  font-family: Muller;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 900;
+
+  text-transform: uppercase;
+}
+
+.bron_hall_container .top_bronHall {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.bron_hall_container .top_bronHall .lft-brnHTP P {
+  font-family: Muller;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+
+.bron_hall_container .top_bronHall .rght-brnHTP {
+  display: flex;
+  flex-direction: row;
+  gap: 28px;
+  align-items: center;
+}
+
+.bron_hall_container .top_bronHall .rght-brnHTP .btn1,
+.btn2 {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  background-color: #2e3441;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bron_hall_container .top_bronHall .rght-brnHTP .btn1:hover,
+.btn2:hover {
+  background: rgba(255, 198, 25, 0.2);
+  transition: all 0.3s ease;
+}
+
+.bron_hall_container .top_bronHall .rght-brnHTP span {
+  color: #fff;
+
+  font-family: Muller;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.72px;
+}
+
+.bron_hall_container .top_bronHall .rght-brnHTP p {
+  color: #606571;
+  font-family: Muller;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.bron_hall_container .btmHall {
+  margin-top: 40px;
+  padding-left: 20px;
+}
+
+.bron_hall_container .btmHall .swiper_Hall {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  padding-top: 15px;
+  overflow-x: scroll;
+}
+
+.bron_hall_container .btmHall .swiper_Hall::-webkit-scrollbar {
+  display: none;
+}
+
+.bron_hall_container .btmHall .swiper_Hall .swiper_card .img.inactive p {
+  display: none;
+}
+
+.bron_hall_container .btmHall .swiper_Hall .swiper_card .img {
+  position: relative;
+}
+
+.bron_hall_container .btmHall .swiper_Hall .swiper_card .img p {
+  position: absolute;
+  top: -15px;
+  right: -20px;
+  width: 61px;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  background: #f69020;
+  filter: drop-shadow(0px 12px 12px rgba(0, 0, 0, 0.15));
+}
+
+.bron_hall_container .btmHall .swiper_Hall .swiper_card .btm-swiper_card {
+  margin-top: 37px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+.bron_hall_container .btmHall .swiper_Hall .swiper_card .btm-swiper_card p {
+  color: #fff;
+  font-family: Muller;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.45px;
+}
+
+.bron_hall_container
+  .btmHall
+  .swiper_Hall
+  .swiper_card
+  .btm-swiper_card
+  p
+  span {
+  color: #f69020;
+}
+
+.bron_hall_container .btmHall .swiper_Hall .swiper_card.opct-disActive {
+  opacity: 0.5;
+}
+
+.swiper_btn_prev,
+.swiper_btn_next {
+  transition: opacity 0.3s ease;
+}
+
+.swiper_btn_prev[disabled],
+.swiper_btn_next[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (max-width: 992px) {
+  .bron_hall .bron_hall_container .top_bronHall {
+    flex-direction: column;
+  }
+  .bron_hall_container .top_bronHall .lft-brnHTP h2 {
+    color: #fff;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .bron_hall_container .top_bronHall {
+    align-items: start;
+  }
+}
+
+@media (max-width: 768px) {
+  .bron_hall_container .top_bronHall .lft-brnHTP h2 {
+    font-size: 28px;
+    font-style: normal;
+    padding-top: 50px;
+  }
+  .bron_hall_container .top_bronHall .lft-brnHTP p {
+    font-size: 14px;
+    font-style: normal;
   }
 }

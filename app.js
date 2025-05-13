@@ -69,3 +69,76 @@ document.addEventListener('DOMContentLoaded', function () {
     mobileMenu.classList.remove('active');
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.swiper_Hall');
+  const slides = document.querySelectorAll('.swiper_card');
+  const prevBtn = document.querySelector('.swiper_btn_prev');
+  const nextBtn = document.querySelector('.swiper_btn_next');
+  const pagination = document.querySelector('.swiper_pagination span');
+  
+  let currentIndex = 0;
+  const slideCount = slides.length;
+  const slideWidth = slides[0].offsetWidth + 100;
+  const visibleSlides = 1; 
+
+  function updateSlider() {
+ 
+    slider.scrollTo({
+      left: currentIndex * slideWidth,
+      behavior: 'smooth'
+    });
+    
+  
+    pagination.textContent = currentIndex + 1;
+    
+   
+    slides.forEach((slide, index) => {
+      if (index === currentIndex) {
+        slide.classList.remove('opct-disActive');
+        const img = slide.querySelector('.img');
+        if (img) {
+          img.classList.remove('inactive');
+          img.classList.add('active');
+        }
+      } else {
+        slide.classList.add('opct-disActive');
+        const img = slide.querySelector('.img');
+        if (img) {
+          img.classList.add('inactive');
+          img.classList.remove('active');
+        }
+      }
+    });
+    
+    prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
+    prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
+    
+    nextBtn.style.opacity = currentIndex >= slideCount - visibleSlides ? '0.5' : '1';
+    nextBtn.style.pointerEvents = currentIndex >= slideCount - visibleSlides ? 'none' : 'auto';
+  }
+  
+  prevBtn.addEventListener('click', function() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSlider();
+    }
+  });
+  
+  nextBtn.addEventListener('click', function() {
+    if (currentIndex < slideCount - visibleSlides) {
+      currentIndex++;
+      updateSlider();
+    }
+  });
+  
+  updateSlider();
+  
+  
+  window.addEventListener('resize', function() {
+    
+    slideWidth = slides[0].offsetWidth + 100;
+    updateSlider();
+  });
+});
